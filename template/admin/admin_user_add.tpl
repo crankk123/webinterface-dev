@@ -1,6 +1,7 @@
-	<!-- start: CSS -->
+<!-- start: CSS -->
 	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="../css/register.css" rel="stylesheet" media="screen">
 	
 	<link id="base-style" href="../css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
@@ -165,7 +166,7 @@
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
 							<ul>
 								<li><a class="submenu" href="newticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neues Ticket</span></a></li>
-								<li><a class="submenu" href="ticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="ticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> �bersicht</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet">#</span></a></li>
 							</ul>	
 						</li>
@@ -173,7 +174,7 @@
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Server</span></a>
 							<ul>
 								<li><a class="submenu" href="submenu.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
-								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> �bersicht</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
 							</ul>	
 						</li>
@@ -188,7 +189,7 @@
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a>
 							<ul>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> �bersicht</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
 							</ul>	
 						</li>						
@@ -212,54 +213,22 @@
 					<a href="index.php">Dashboard</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Seiten Einstellungen</a></li>
+				<li><a href="#">Benutzer Hinzuf�gen</a></li>
 			</ul>
 
-			<h1>Seiten Einstellungen</h1>
+			<h1>Benutzer Hinzuf�gen</h1>
 			<div class="bs-example">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-				<td>Aktion</td>
-				
-				
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>John</td>
-                <td>Carter</td>
-                <td>johncarter@mail.com</td>
-				<td><a href="user_add.php" class="btn btn-info btn-mini"><i class="icon-plus"></i> Hinzufügen</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Ändern</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Löschen</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Peter</td>
-                <td>Parker</td>
-                <td>peterparker@mail.com</td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-plus"></i> Hinzufügen</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Ändern</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Löschen</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>John</td>
-                <td>Rambo</td>
-                <td>johnrambo@mail.com</td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-plus"></i> Hinzufügen</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Ändern</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Löschen</a></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <div id="register">
+            <form action='user_add.php' method='post'>
+                <p>Benutzername: <input type="text" name="user"></p>
+                <p>Passwort: <input type="text" name="pass"></p>
+                <p>Passwort wiederholen: <input type="text" name="pass_w"></p>
+                <p>E-Mail: <input type="text" name="email"></p>
+                <input type="submit" value='Hinzuf�gen' name="register"> 
+				<input type="reset" value="Reset" name="reset">
+            </form>
+        </div>
+		</div>
   
 			
 
@@ -276,4 +245,3 @@
 			<!-- end: Content -->
 		</div><!--/#content.span10-->
 		</div><!--/fluid-row-->
- 
