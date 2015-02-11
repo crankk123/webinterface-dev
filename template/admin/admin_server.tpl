@@ -319,36 +319,48 @@
 				
 			<div class="page-header">
   <h1>Server &Uuml;bersicht</h1>
-</div>
+			</div>
+				<table class="table table-striped">
+			<thead>
+				<tr>
+					
+				<th>ID</th><th>IP</th><th>PORT</th><th>Art</th><th>Spiel</th><th><a href="#" class="btn btn-primary">
+    	<i class="icon-trash icon-white"></i>
+	    <span><strong>Delete</strong></span>        	
+    </a></th>
 				
-			</div>		
-						<div class="table">
+				</tr>
+			</thead>
 			
-									 <h2>Server &Uuml;bersicht</h2>
-									<p>&Uuml;bersicht &uuml;ber die Server</p>            
-										<!-- aus DB auslesen-->
-										<table class="table">
-										<thead>
-										<tr>
-											<th>ID</th>
-											<th>IP</th>
-											<th>PORT</th>
-											<th>Status</th>
-											<th>Benutzername</th>
-										</tr>
-							</thead>
-							<tbody>
-							  <tr>
-								<td>1</td>    			<!-- id-->
-								<td>127.0.0.1</td>  	<!-- ip-->
-								<td>9987</td>			<!-- port-->
-								<td>Online</td>			<!-- status-->
-								<td>admin</td>			<!-- user-->
-								 </tr>
-						  
-							</tbody>
-						  </table>
-						</div>
+			<tbody>
+				<?php
+					//set up mysql connection
+					mysql_connect("localhost", "root", "alka") or die(mysql_error());
+					//select database
+					mysql_select_db("webinterface") or die(mysql_error());
+					// Retrieve all the data from the "tblstudent" table
+					$result = mysql_query("SELECT * FROM server")
+					or die(mysql_error());  
+					// store the record of the "tblstudent" table into $row
+
+					while($row = mysql_fetch_array($result)){
+					// Print out the contents of the entry 
+					echo '<tr>';
+					echo '<td>'.$row['id'].'</td>';
+					echo '<td>'.$row['ip'].'</td>';
+					echo '<td>'.$row['port'].'</td>';
+					echo '<td>'.$row['art'].'</td>';
+					echo '<td>'.$row['Spiel'].'</td>';
+					}
+
+				?>
+			
+				
+				</tr>
+			<tbody>
+		</table>
+			</div>		
+						
 			
 			
 			

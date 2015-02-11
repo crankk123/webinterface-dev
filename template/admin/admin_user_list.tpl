@@ -217,48 +217,44 @@
 
 			<h1>Benutzer &Uuml;bersicht</h1>
 			<div class="bs-example">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-				<td>Aktion</td>
+     <div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th><th>Benutzername</th><th>Email</th><th>Gruppe</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<?php
+					//set up mysql connection
+					mysql_connect("localhost", "root", "alka") or die(mysql_error());
+					//select database
+					mysql_select_db("webinterface") or die(mysql_error());
+					// Retrieve all the data from the "tblstudent" table
+					$result = mysql_query("SELECT * FROM userdaten")
+					or die(mysql_error());  
+					// store the record of the "tblstudent" table into $row
+
+					while($row = mysql_fetch_array($result)){
+					// Print out the contents of the entry 
+					echo '<tr>';
+					echo '<td>'.$row['id'].'</td>';
+					echo '<td>'.$row['benutzer'].'</td>';
+					echo '<td>'.$row['email'].'</td>';
+					echo "<td><form name='frmDelete' action='your delete page here' method='post'><input type='hidden' name='itemid' value='{echo ID here}'><input type='submit' name='dlteBtn' value='delete'></form></td>";
+					}
+
+				?>
+			
 				
-				
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>John</td>
-                <td>Carter</td>
-                <td>johncarter@mail.com</td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Hinzuf&uuml;gen</a></td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> L&ouml;schen</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Peter</td>
-                <td>Parker</td>
-                <td>peterparker@mail.com</td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Hinzuf&uuml;gen</a></td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> L&ouml;schen</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>John</td>
-                <td>Rambo</td>
-                <td>johnrambo@mail.com</td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Hinzuf&uuml;gen</a></td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> L&ouml;schen</a></td>
-            </tr>
-        </tbody>
-    </table>
+				</tr>
+			<tbody>
+		</table>
+	
+	
+	
+    </div> <!-- /container -->
 </div>
   
 			

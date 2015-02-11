@@ -9,4 +9,3 @@ require("../template/admin/admin_user_list.tpl");
 
 ?>
 <title>User</title>
-
