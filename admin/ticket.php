@@ -9,5 +9,5 @@
   
 $content="<h1>Hello World</h1>";
 
-require("../template/admin/admin_server.tpl");
+require("../template/admin/admin_ticket.tpl");
 ?>

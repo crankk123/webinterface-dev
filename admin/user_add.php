@@ -17,8 +17,10 @@
         </div>
     </body>
 </html>-->
+<link href="../css/register.css" rel="stylesheet" media="screen">
 <?php
 require("../template/admin/admin_user_add.tpl");
+require("../include.php");
     if (isset($_POST['user']) AND isset($_POST['pass']) AND isset($_POST['pass_w']) AND isset($_POST['email'])) {
         $benutzer = $_POST['user'];
         $passwort = $_POST['pass'];

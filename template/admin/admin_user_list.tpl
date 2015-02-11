@@ -164,8 +164,8 @@
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
 							<ul>
-								<li><a class="submenu" href="newticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neues Ticket</span></a></li>
-								<li><a class="submenu" href="ticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="ticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="ticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Ticket er&ouml;ffnen</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet">#</span></a></li>
 							</ul>	
 						</li>
@@ -173,7 +173,7 @@
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Server</span></a>
 							<ul>
 								<li><a class="submenu" href="submenu.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
-								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
 							</ul>	
 						</li>
@@ -188,7 +188,7 @@
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a>
 							<ul>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
 							</ul>	
 						</li>						
@@ -212,10 +212,10 @@
 					<a href="index.php">Dashboard</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Seiten Einstellungen</a></li>
+				<li><a href="#">Benutzer &Uuml;bersicht</a></li>
 			</ul>
 
-			<h1>Seiten Einstellungen</h1>
+			<h1>Benutzer &Uuml;bersicht</h1>
 			<div class="bs-example">
     <table class="table">
         <thead>
@@ -235,27 +235,27 @@
                 <td>John</td>
                 <td>Carter</td>
                 <td>johncarter@mail.com</td>
-				<td><a href="user_add.php" class="btn btn-info btn-mini"><i class="icon-plus"></i> Hinzufügen</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Ändern</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Löschen</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Hinzuf&uuml;gen</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> L&ouml;schen</a></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Peter</td>
                 <td>Parker</td>
                 <td>peterparker@mail.com</td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-plus"></i> Hinzufügen</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Ändern</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Löschen</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Hinzuf&uuml;gen</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> L&ouml;schen</a></td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>John</td>
                 <td>Rambo</td>
                 <td>johnrambo@mail.com</td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-plus"></i> Hinzufügen</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Ändern</a></td>
-				<td><a href="#" class="btn btn-info btn-mini"><i class="icon-pencil"></i> Löschen</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Hinzuf&uuml;gen</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> L&ouml;schen</a></td>
             </tr>
         </tbody>
     </table>

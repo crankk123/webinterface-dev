@@ -1,6 +1,7 @@
 <!-- start: CSS -->
 	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	
 	<link id="base-style" href="../css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
@@ -187,7 +188,7 @@
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a>
 							<ul>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
 							</ul>	
 						</li>						
@@ -211,22 +212,48 @@
 					<a href="index.php">Dashboard</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Benutzer Hinzufügen</a></li>
+				<li><a href="#">Benutzer &Uuml;bersicht</a></li>
 			</ul>
 
-			<h1>Benutzer Hinzufügen</h1>
-			<div class="bs-example">
-    <div id="register">
-            <form action='user_add.php' method='post'>
-                <p>Benutzername: <input type="text" name="user"></p>
-                <p>Passwort: <input type="text" name="pass"></p>
-                <p>Passwort wiederholen: <input type="text" name="pass_w"></p>
-                <p>E-Mail: <input type="text" name="email"></p>
-                <input type="submit" value='Hinzufügen' name="register"> 
-				<input type="reset" value="Reset" name="reset">
-            </form>
-        </div>
-		</div>
+			<div class="row-fluid">
+				
+			<div class="page-header">
+  <h1>Ticket Übersicht</h1>
+</div>
+				
+			</div>		
+			<div class="table">
+			
+			 <h2>Ticket Übersicht</h2>
+  <p>Übersicht über Tickets</p>            
+  <!-- aus DB auslesen-->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Betreff</th>
+        <th>Benutzername</th>
+		<th>Abteilung</th>
+		<th>Priorität</th>
+		<th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>    			<!-- id-->
+        <td>Test Ticket</td>  			<!-- ip-->
+        <td>test</td>			<!-- port-->
+		<td>Server Admin</td>			<!-- status-->
+		<td>admin</td>			<!-- user-->
+		<td>Offen</td>			<!-- user-->
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></td>
+				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Löschen</a></td>
+		 </tr>
+  
+    </tbody>
+  </table>
+</div>
+</div>
   
 			
 
@@ -243,3 +270,4 @@
 			<!-- end: Content -->
 		</div><!--/#content.span10-->
 		</div><!--/fluid-row-->
+ 

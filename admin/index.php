@@ -11,7 +11,7 @@
 $content="<h1>Hello World</h1>";
 
 require("../template/admin/admin.tpl");
-//require("include.php");
+require("../template/footer.tpl");
 if (isset($_SESSION["loggedin"])) {
 if($_SESSION["loggedin"]){
 	echo $html;

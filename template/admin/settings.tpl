@@ -137,7 +137,7 @@
 								<li class="dropdown-menu-title">
  									<span>Account Settings</span>
 								</li>
-								<li><a href="user.html"><i class="halflings-icon user"></i> Profile</a></li>
+								<li><a href="profile.php"><i class="halflings-icon user"></i> Profile</a></li>
 								<li><a href="../login.php"><i class="halflings-icon off"></i> Logout</a></li>
 							</ul>
 						</li>
@@ -158,7 +158,7 @@
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+						<li><a href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
 
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
@@ -171,8 +171,8 @@
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Server</span></a>
 							<ul>
-								<li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
-								<li><a class="submenu" href="server.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
 							</ul>	
 						</li>

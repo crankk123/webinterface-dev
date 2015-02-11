@@ -136,8 +136,8 @@
 								<li class="dropdown-menu-title">
  									<span>Account Settings</span>
 								</li>
-								<li><a href="user.php"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="login.php"><i class="halflings-icon off"></i> Logout</a></li>
+								<li><a href="profile.php"><i class="halflings-icon user"></i> Profile</a></li>
+								<li><a href="../index.php"><i class="halflings-icon off"></i> Logout</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->

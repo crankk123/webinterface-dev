@@ -162,8 +162,8 @@
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
 							<ul>
-								<li><a class="submenu" href="ticket/openticket.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Neues Ticket</span></a></li>
-								<li><a class="submenu" href="ticket.html"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="ticket.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="admin_ticket_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Ticket eröffnen</span></a></li>
 								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">#</span></a></li>
 							</ul>	
 						</li>
@@ -205,6 +205,7 @@
 			</noscript>
 			
 			<!-- start: Content -->
+			
 			<div id="content" class="span10">
 			
 			
@@ -219,9 +220,7 @@
 
 			<div class="row-fluid">
 				
-			
-				
-			</div>		
+	
 
 			
 			<div class="row-fluid hideInIE8 circleStats">
