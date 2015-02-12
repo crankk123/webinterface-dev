@@ -1,4 +1,4 @@
 <?php
-$query=mysql_connect("localhost","root","alka");
+$query=mysql_connect("localhost","root","");
 mysql_select_db("webinterface",$query);
 ?>
