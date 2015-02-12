@@ -62,7 +62,9 @@
 
 		<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->
-	
+	<?php
+session_start();
+?>
 <div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
@@ -129,7 +131,8 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Admin ToDo
+						
+								<i class="halflings-icon white user"></i>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -137,7 +140,7 @@
  									<span>Account Settings</span>
 								</li>
 								<li><a href="user.html"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="../login.php"><i class="halflings-icon off"></i> Abmelden</a></li>
+								<li><a href="../logout.php"><i class="halflings-icon off"></i> Abmelden</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -148,6 +151,7 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- start: Header -->
 	
 		<div class="container-fluid-full">

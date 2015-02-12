@@ -1,56 +1,30 @@
 <?php
-$benutzer = $_POST['user'];
-$passwort = $_POST['pass'];
+include("config.php");
+session_start();
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+// username and password sent from Form
+$benutzer=mysqli_real_escape_string($db,$_POST['benutzer']); 
+$passwort=mysqli_real_escape_string($db,$_POST['passwort']); 
 
-    if($benutzer AND $passwort)
-	{
-	  //connect to db
-	  $connect = mysql_connect("localhost","root","alka");
-	  mysql_select_db("webinterface");
-	  
-	  $query = mysql_query("SELECT * FROM userdaten WHERE benutzer='$benutzer'");
-	  $num = mysql_num_rows($query);
-	  
-	  if($num>0)
-	  {
-		  WHILE ($row = mysql_fetch_assoc($query))
-		  {
-			 $dbbenutzer = $row['benutzer'];
-			 $dbpasswort = $row['passwort'];		  
-		   }
-		   if ($dbbenutzer==$benutzer AND $dbpasswort==$passwort)
-		   {
-			  header("Location:admin/index.php"); 
-			  			   
-			   }
-		       else
-			       echo "Ihre Daten wurden nicht gefunden!";
-		  }
-	      else
-		      echo "Der angegeben Benutzer existiert nicht!";
-	}
-	   
-	   else
-	        echo "Bitte f&uuml;llen Sie alle Felder aus!";		
+$sql="SELECT id FROM userdaten WHERE benutzer='$benutzer' and passcode='$passwort'";
+$result=mysqli_query($db,$sql);
+$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+$active=$row['active'];
+$count=mysqli_num_rows($result);
 
+
+// If result matched $myusername and $passwort, table row must be 1 row
+if($count==1)
+{
+session_register("benutzer");
+$_SESSION['login_user']=$myusername;
+
+header("location: welcome.php");
+}
+else 
+{
+$error="Your Login Name or Password is invalid";
+}
+}
 ?>
-<!DOCTYPE html>
- <head>
-  <title>Login</title>
-  <link href="" rel="stylesheet" media="screen">
-  <link href="css/login.css" rel="stylesheet" type="text/css">
- </head>
- <body>
-  <div id="loginform">
-  <h1>Admin Login</h1>
-  <form action="login.php" method="post">   
-    <p>Kundennummer: <input type="text" name="user"></p>
-    <p>Kundenpasswort: <input type="password" name="pass"></p>
-   <input type="submit" value="Anmelden"> <input type="reset" name="reset" value="Reset"> <a href = 'register.php'><b>Registration?</b></a>
-  <a class="button" href="">Passwort vergessen?</a>
-  </form>
-   </div>
-   <div id="footer">&raquo; <a href="http://teampenner.de">Homepage</a> | Admin Panel</div>
-		</div>
- </body>
-</html>

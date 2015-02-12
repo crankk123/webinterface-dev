@@ -221,38 +221,55 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>ID</th><th>Benutzername</th><th>Email</th><th>Gruppe</th>
+					<th>ID</th><th>Benutzername</th><th>Email</th><th>Gruppe</th><th>Aktion</th>
 				</tr>
 			</thead>
 			
 			<tbody>
 				<?php
-					//set up mysql connection
-					mysql_connect("localhost", "root", "alka") or die(mysql_error());
-					//select database
-					mysql_select_db("webinterface") or die(mysql_error());
-					// Retrieve all the data from the "tblstudent" table
-					$result = mysql_query("SELECT * FROM userdaten")
-					or die(mysql_error());  
-					// store the record of the "tblstudent" table into $row
 
-					while($row = mysql_fetch_array($result)){
-					// Print out the contents of the entry 
-					echo '<tr>';
-					echo '<td>'.$row['id'].'</td>';
-					echo '<td>'.$row['benutzer'].'</td>';
-					echo '<td>'.$row['email'].'</td>';
-					echo "<td><form name='frmDelete' action='your delete page here' method='post'><input type='hidden' name='itemid' value='{echo ID here}'><input type='submit' name='dlteBtn' value='delete'></form></td>";
-					}
+include('config.php');
 
-				?>
+$result = mysql_query("SELECT * FROM userdaten")
+or die(mysql_error());
+
+echo "<table border='1' cellpadding='10'>";
+echo "<tr>
+<td><font color='Red'>Id</font></td>
+<th><font color='Red'>Name</font></th>
+<th><font color='Red'>E-mail</font></th>
+<th><font color='Red'>Gruppe</font></th>
+<th><font color='Red'>Add</font></th>
+<th><font color='Red'>Edit</font></th>
+<th><font color='Red'>Delete</font></th>
+ 
+                
+</tr>";
+
+while($row = mysql_fetch_array( $result ))
+{
+
+echo "<tr>";
+echo '<td><b><font color="#663300">' . $row['id'] . '</font></b></td>';
+echo '<td><b><font color="#663300">' . $row['benutzer'] . '</font></b></td>';
+echo '<td><b><font color="#663300">' . $row['email'] . '</font></b></td>';
+echo '<td><b><font color="#663300">' . $row['group'] . '</font></b></td>';
+echo '<td><b><font color="#663300"><a href="user_add.php?id=' . $row['id'] . '">Add</a></font></b></td>';
+echo '<td><b><font color="#663300"><a href="user_edit.php?id=' . $row['id'] . '">Edit</a></font></b></td>';
+echo '<td><b><font color="#663300"><a href="user_delete.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
+echo "</tr>";
+
+}
+
+echo "</table>";
+?>
 			
 				
 				</tr>
 			<tbody>
 		</table>
 	
-	
+	<p><a href="user_add.php">Insert new record</a></p>
 	
     </div> <!-- /container -->
 </div>

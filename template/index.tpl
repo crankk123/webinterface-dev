@@ -32,10 +32,10 @@
         <div id="navbar" class="navbar-collapse collapse">
           <form method="post"class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" name="user"placeholder="Email" class="form-control">
+              <input type="text" name="benutzer"placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" name="pass" placeholder="Password" class="form-control">
+              <input type="password" name="passwort" placeholder="Password" class="form-control">
             </div>
             <a href=""><button type="submit" class="btn btn-success">Sign in</button></a>
           </form>

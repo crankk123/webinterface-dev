@@ -6,45 +6,24 @@
  *	The " is not allowed but you can create chains.	
  *
  */
-  
-$content="<h1>Hello World</h1>";
-
-require("template/index.tpl");
-
-$benutzer = $_POST['user'];
-$passwort = $_POST['pass'];
-
-    if($benutzer AND $passwort)
-	{
-	  //connect to db
-	  $connect = mysql_connect("localhost","root","alka");
-	  mysql_select_db("webinterface");
-	  
-	  $query = mysql_query("SELECT * FROM userdaten WHERE benutzer='$benutzer'");
-	  $num = mysql_num_rows($query);
-	  
-	  if($num>0)
-	  {
-		  WHILE ($row = mysql_fetch_assoc($query))
-		  {
-			 $dbbenutzer = $row['benutzer'];
-			 $dbpasswort = $row['passwort'];		  
-		   }
-		   if ($dbbenutzer==$benutzer AND $dbpasswort==$passwort)
-		   {
-			  header("Location:#"); 
-			  			   
-			   }
-		       else
-			       echo "Ihre Daten wurden nicht gefunden!";
-		  }
-	      else
-		      echo "Der angegeben Benutzer existiert nicht!";
-	}
-	   
-	   else
-	        echo "Bitte f&uuml;llen Sie alle Felder aus!";		
-
+ require("template/index.tpl");
+session_start();
+$message="";
+if(count($_POST)>0) {
+$conn = mysql_connect("localhost","root","alka");
+mysql_select_db("webinterface",$conn);
+$result = mysql_query("SELECT * FROM userdaten WHERE benutzer='" . $_POST["benutzer"] . "' and passwort = '". $_POST["passwort"]."'");
+$row  = mysql_fetch_array($result);
+if(is_array($row)) {
+$_SESSION["id"] = $row[id];
+$_SESSION["benutzer"] = $row[benutzer];
+} else {
+$message = "Invalid Username or Password!";
+}
+}
+if(isset($_SESSION["id"])) {
+header("Location:admin/index.php");
+}
 ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

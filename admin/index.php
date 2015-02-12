@@ -1,5 +1,9 @@
 <?php
-//session_start();
+session_start();
+?>
+<?php	
+
+
 /*	
  *	Content File
  *	
@@ -8,16 +12,13 @@
  *
  */
   
-$content="<h1>Hello World</h1>";
 
 require("../template/admin/admin.tpl");
 require("../template/footer.tpl");
-if (isset($_SESSION["loggedin"])) {
-if($_SESSION["loggedin"]){
-	echo $html;
-}
-} else {
-	header("Location: ../index.php");
+if($_SESSION["benutzer"]) {
+?>
+	
+<?php
 }
 ?>
 <!-- start: CSS -->
