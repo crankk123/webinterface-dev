@@ -7,27 +7,46 @@
  *
  */
  require("template/index.tpl");
- session_start();
-	require_once(dirname(__FILE__)."/config/su.inc.php");
 
-	$SimpleUsers = new SimpleUsers();
+?>
+<?php
+session_start();
+if (isset($_POST['user']) AND isset($_POST['pass'])){ 
+	$benutzer = $_POST['user'];
+	$passwort = $_POST['pass'];
 
-	// Login from post data
-	if( isset($_POST["username"]) )
+	if($benutzer AND $passwort)
 	{
+	  //connect to db
+		$connect = mysql_connect("localhost","root","alka");
+		mysql_select_db("webinterface");
 
-		// Attempt to login the user - if credentials are valid, it returns the users id, otherwise (bool)false.
-		$res = $SimpleUsers->loginUser($_POST["username"], $_POST["password"]);
-		if(!$res)
-			$error = "You supplied the wrong credentials.";
-		else
+		$query = mysql_query("SELECT * FROM userdaten WHERE benutzer='$benutzer'");
+		$num = mysql_num_rows($query);
+
+		if($num>0)
 		{
-				header("Location: admin/index.php");
-				exit;
+			WHILE ($row = mysql_fetch_assoc($query))
+			{
+				$dbbenutzer = $row['benutzer'];
+				$dbpasswort = $row['passwort'];		  
+			}
+			if ($dbbenutzer==$benutzer AND $dbpasswort==$passwort)
+			{
+				$_SESSION['loggedin'] = true; 
+				header("Location:kundenbereich.php"); 
+
+			}
+			else
+				echo "Ihre Daten wurden nicht gefunden!";
 		}
+		else
+			echo "Der angegeben Benutzer existiert nicht!";
+	}
 
-	} // Validation end
-
+	else
+		echo "Bitte f&uuml;llen Sie alle Felder aus!";		
+}
 ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,9 +57,9 @@
 
     <title>Webinterface</title>
 	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.index.css" rel="stylesheet">
+
 	<!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js</script>
-    <script src="js/bootstrap.min.js"></script>
+
 
