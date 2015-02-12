@@ -74,4 +74,7 @@
 		<div id="footer">&raquo; <a href="#">Homepage</a> | Admin Panel 
 		
 	</div>
-  
+  <video autoplay loop poster="polina.jpg" id="bgvid">
+
+<source src="final.mp4" type="video/mp4">
+</video>
