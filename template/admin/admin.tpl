@@ -62,9 +62,6 @@
 
 		<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->
-	<?php
-session_start();
-?>
 <div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
@@ -162,6 +159,7 @@ session_start();
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+						<li><a href="../user/user_dashboard.php"><i class="icon-home"></i><span class="hidden-tablet">User Dashboard</span></a></li>	
 
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
@@ -224,7 +222,20 @@ session_start();
 
 			<div class="row-fluid">
 				
-	
+	<div class="col-sm-2">
+    	    <div class="hero-widget well well-sm">
+                <div class="icon">
+                     <i class="icon-user"></i>
+                </div>
+                <div class="text">
+                    <var>3</var>
+                    <label class="text-muted">invited guests</label>
+                </div>
+                <div class="options">
+                    <a href="javascript:;" class="btn btn-primary btn-lg"><i class="icon-user-add"></i> Add a guest</a>
+                </div>
+            </div>
+		</div>
 
 			
 			<div class="row-fluid hideInIE8 circleStats">

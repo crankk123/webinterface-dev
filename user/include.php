@@ -1,6 +1,6 @@
 
 <!-- start: CSS -->
-	<link id="bootstrap-style" href="/css/bootstrap.min.css" rel="stylesheet">
+	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link id="base-style" href="css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">

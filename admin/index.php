@@ -14,7 +14,7 @@ session_start();
   
 
 require("../template/admin/admin.tpl");
-require("../template/footer.tpl");
+//require("../template/footer.tpl");
 if($_SESSION["benutzer"]) {
 ?>
 	

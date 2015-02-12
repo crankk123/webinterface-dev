@@ -7,23 +7,27 @@
  *
  */
  require("template/index.tpl");
-session_start();
-$message="";
-if(count($_POST)>0) {
-$conn = mysql_connect("localhost","root","alka");
-mysql_select_db("webinterface",$conn);
-$result = mysql_query("SELECT * FROM userdaten WHERE benutzer='" . $_POST["benutzer"] . "' and passwort = '". $_POST["passwort"]."'");
-$row  = mysql_fetch_array($result);
-if(is_array($row)) {
-$_SESSION["id"] = $row[id];
-$_SESSION["benutzer"] = $row[benutzer];
-} else {
-$message = "Invalid Username or Password!";
-}
-}
-if(isset($_SESSION["id"])) {
-header("Location:admin/index.php");
-}
+ session_start();
+	require_once(dirname(__FILE__)."/config/su.inc.php");
+
+	$SimpleUsers = new SimpleUsers();
+
+	// Login from post data
+	if( isset($_POST["username"]) )
+	{
+
+		// Attempt to login the user - if credentials are valid, it returns the users id, otherwise (bool)false.
+		$res = $SimpleUsers->loginUser($_POST["username"], $_POST["password"]);
+		if(!$res)
+			$error = "You supplied the wrong credentials.";
+		else
+		{
+				header("Location: admin/index.php");
+				exit;
+		}
+
+	} // Validation end
+
 ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,4 +41,6 @@ header("Location:admin/index.php");
 	<link href="css/bootstrap.min.index.css" rel="stylesheet">
 	<!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js</script>
+    <script src="js/bootstrap.min.js"></script>
 
