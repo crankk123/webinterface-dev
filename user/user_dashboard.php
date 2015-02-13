@@ -12,6 +12,7 @@
 
 require("../template/user/user_dashboard.tpl");
 include("../include.php");
+include("auth.php");
 //require("../template/footer.tpl");
 
 ?>

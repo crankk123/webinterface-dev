@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 // template
 require("../template/admin/admin_user_list.tpl");

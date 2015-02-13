@@ -10,8 +10,11 @@ session_start();
  *	The " is not allowed but you can create chains.	
  *
  */
-
-require("../template/admin/admin.tpl");
+ if($_SESSION['loggedin']){
+ 	require("../template/admin/admin.tpl");
+ }else{
+ 	header("location:../index.php");
+ }
 //require("../template/footer.tpl");
 ?>
 
