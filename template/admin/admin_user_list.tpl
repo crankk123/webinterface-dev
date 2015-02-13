@@ -131,7 +131,7 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Dennis Ji
+								<i class="halflings-icon white user"></i> <?php echo $_SESSION["user"]; ?>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -217,15 +217,7 @@
 
 			<h1>Benutzer &Uuml;bersicht</h1>
 			<div class="bs-example">
-     <div class="container">
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>ID</th><th>Benutzername</th><th>Email</th><th>Gruppe</th><th>Aktion</th>
-				</tr>
-			</thead>
-			
-			<tbody>
+
 				<?php
 
 include('config.php');
@@ -233,28 +225,25 @@ include('config.php');
 $result = mysql_query("SELECT * FROM userdaten")
 or die(mysql_error());
 
-echo "<table border='1' cellpadding='10'>";
-echo "<tr>
-<td><font color='Red'>Id</font></td>
-<th><font color='Red'>Name</font></th>
-<th><font color='Red'>E-mail</font></th>
-<th><font color='Red'>Gruppe</font></th>
-<th><font color='Red'>Add</font></th>
-<th><font color='Red'>Edit</font></th>
-<th><font color='Red'>Delete</font></th>
- 
-                
-</tr>";
+echo  ' 		     <div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th><th>Benutzername</th><th>Email</th><th>Gruppe</th><th>Aktion</th>
+				</tr>
+			</thead>
+			
+			<tbody>	';
 
+			
 while($row = mysql_fetch_array( $result ))
 {
 
 echo "<tr>";
-echo '<td><b><font color="#663300">' . $row['id'] . '</font></b></td>';
-echo '<td><b><font color="#663300">' . $row['benutzer'] . '</font></b></td>';
-echo '<td><b><font color="#663300">' . $row['email'] . '</font></b></td>';
-echo '<td><b><font color="#663300">' . $row['group'] . '</font></b></td>';
-echo '<td><b><font color="#663300"><a href="user_add.php?id=' . $row['id'] . '">Add</a></font></b></td>';
+echo '<td>' . $row['id'] . '</td>';
+echo '<td>' . $row['benutzer'] . '</font></b></td>';
+echo '<td>' . $row['email'] . '</font></b></td>';
+echo '<td>' . $row['group'] . '</font></b></td>';
 echo '<td><b><font color="#663300"><a href="user_edit.php?id=' . $row['id'] . '">Edit</a></font></b></td>';
 echo '<td><b><font color="#663300"><a href="user_delete.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
 echo "</tr>";
@@ -264,12 +253,10 @@ echo "</tr>";
 echo "</table>";
 ?>
 			
-				
-				</tr>
+	
 			<tbody>
 		</table>
-	
-	<p><a href="user_add.php">Insert new record</a></p>
+		<span class="icon"><i class="icon-plus"></i><a href="user_add.php"><b>  Add new User</b></a></span>
 	
     </div> <!-- /container -->
 </div>

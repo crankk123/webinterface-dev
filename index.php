@@ -14,7 +14,8 @@ session_start();
 if (isset($_POST['user']) AND isset($_POST['pass'])){ 
 	$benutzer = $_POST['user'];
 	$passwort = $_POST['pass'];
-
+	$_SESSION["user"] = $benutzer;
+	
 	if($benutzer AND $passwort)
 	{
 	  //connect to db
@@ -34,18 +35,18 @@ if (isset($_POST['user']) AND isset($_POST['pass'])){
 			if ($dbbenutzer==$benutzer AND $dbpasswort==$passwort)
 			{
 				$_SESSION['loggedin'] = true; 
-				header("Location:kundenbereich.php"); 
+				header("Location:admin/index.php"); 
 
 			}
 			else
-				echo "Ihre Daten wurden nicht gefunden!";
-		}
+				echo "<script language='javascript'>alert('Ihre Daten wurden nicht gefunden');</script>";
+		}		
 		else
-			echo "Der angegeben Benutzer existiert nicht!";
+			echo "<script language='javascript'>alert('Der angegeben Benutzer existiert nicht');</script>"; 
 	}
 
 	else
-		echo "Bitte f&uuml;llen Sie alle Felder aus!";		
+		echo "<script language='javascript'>alert('Bitte füllen Sie alle Felder aus!');</script>";	
 }
 ?>
     <meta charset="utf-8">

@@ -10,7 +10,6 @@ session_start();
  *	The " is not allowed but you can create chains.	
  *
  */
-  
 
 require("../template/admin/admin.tpl");
 //require("../template/footer.tpl");

@@ -1,8 +1,8 @@
 	<!-- start: CSS -->
-	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="../css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- end: CSS -->
 	<!-- start: JavaScript-->
@@ -127,9 +127,8 @@
 						</li>
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						
-								<i class="halflings-icon white user"></i>
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="halflings-icon white user"></i> Hallo, <?php echo $_SESSION["user"]; ?>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -285,21 +284,16 @@
 
 				<div class="span2 noMargin" onTablet="span4" onDesktop="span2">
                 	<div class="circleStatsItemBox pink">
-						<div class="header">CPU Auslastung</div>
-						<span class="percent">Prozent</span>
+						<div class="header">User Count</div>
+						<span class="percent">User</span>
                     	<div class="circleStat">
-                    		<input type="text" value="83" class="whiteCircle" />
+                    		<input type="text" value="<?php include("get_user.php"); ?>" class="whiteCircle" />
 						</div>
 						<div class="footer">
 							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GHz</span>
+								<span class="number"><?php include("get_user.php"); ?></span>
+								<span class="unit">Users</span>
 							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">3.2</span>
-								<span class="unit">GHz</span>
-							</span>	
 						</div>
                 	</div>
 				</div>

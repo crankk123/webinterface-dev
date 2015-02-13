@@ -31,7 +31,7 @@
 						<strong> Sign in to continue</strong>
 					</div>
 					<div class="panel-body">
-						<form role="form" action="echo $_SERVER['PHP_SELF'];" method="POST">
+						<form role="form" action="" method="POST">
 							<fieldset>
 								<div class="row">
 									<div class="center-block">
@@ -46,7 +46,7 @@
 												<span class="input-group-addon">
 													<i class="glyphicon glyphicon-user"></i>
 												</span> 
-												<input class="form-control" placeholder="Username" name="loginname" type="text" autofocus>
+												<input class="form-control" placeholder="Username" name="user" type="text" autofocus>
 											</div>
 										</div>
 										<div class="form-group">
@@ -54,7 +54,7 @@
 												<span class="input-group-addon">
 													<i class="glyphicon glyphicon-lock"></i>
 												</span>
-												<input class="form-control" placeholder="Password" name="password" type="password" value="">
+												<input class="form-control" placeholder="Password" name="pass" type="password" value="">
 											</div>
 										</div>
 										<div class="form-group">
@@ -66,7 +66,7 @@
 						</form>
 					</div>
 					<div class="panel-footer ">
-						Don't have an account! <a href="#" onClick=""> Sign Up Here </a>
+						Don't have an account! <a href="register.php" onClick=""> Sign Up Here </a>
 					</div>
                 </div>
 			</div>
