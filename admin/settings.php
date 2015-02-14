@@ -12,4 +12,5 @@ $content="<h1>Hello World</h1>";
 //require("/template/admin/settings.tpl");
 require("../template/admin/settings.tpl");
 require("template/footer.tpl");
+include_once 'common.php';
 ?>

@@ -212,12 +212,33 @@
 			</ul>
 
 			<h1>Seiten Einstellungen</h1>
-			<div class="form-group">
-                    <label for="selectLanguage" class="col-sm-4 control-label">Site Language</label>
-                    <div class="col-sm-8">
-                        <select id="selectLanguage" name='language'></select>
-                    </div>
-                </div>
+			<div class="control-group">
+  <label class="control-label" for="selectbasic">Sprache Wählen</label>
+  <div class="controls">
+    <select id="selectbasic" name="selectbasic" class="input-xlarge">
+      <option>Deutsch</option>
+      <option>English</option>
+    </select>
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="selectbasic">Design Wählen</label>
+  <div class="controls">
+    <select id="selectbasic" name="selectbasic" class="input-xlarge">
+      <option>Default</option>
+      <option>Hardline</option>
+    </select>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="control-group">
+  <label class="control-label" for="singlebutton"></label>
+  <div class="controls">
+    <button id="singlebutton" name="singlebutton" class="btn btn-success">Update</button>
+  </div>
+</div>
+
 			<!--
 <div class='row'>
 <div id='regbox' class='col-lg-6'>
