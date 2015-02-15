@@ -61,5 +61,5 @@
 	</div>
   <video autoplay loop poster="polina.jpg" id="bgvid">
 
-<source src="final.mp4" type="video/mp4">
+<source src="includes/final.mp4" type="video/mp4">
 </video>
