@@ -1,9 +1,217 @@
-<!--<link href="../css/bootstrap.min.index.css" rel="stylesheet">-->
+	
+<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="index.php"><span>Admin Panel</span></a>
+								
+				<!-- start: Header Menu -->
+				<div class="nav-no-collapse header-nav">
+					<ul class="nav pull-right">
+						<li class="dropdown hidden-phone">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="halflings-icon white warning-sign"></i>
+							</a>
+							<ul class="dropdown-menu notifications">
+								<li class="dropdown-menu-title">
+ 									<span>You have 11 notifications</span>
+									<a href="#refresh"><i class="icon-repeat"></i></a>
+								</li>	
+                            	<li>
+                                    <a href="#">
+										<span class="icon blue"><i class="icon-user"></i></span>
+										<span class="message">ToDo</span>
+										<span class="time">1 min ToDo</span> 
+                                    </a>
+                                </li>
+								
+                                <li class="dropdown-menu-sub-footer">
+                            		<a>View all notifications ToDo</a>
+								</li>	
+							</ul>
+						</li>
+						<!-- start: Notifications Dropdown -->
+						<li class="dropdown hidden-phone">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="halflings-icon white tasks"></i>
+							</a>
+							<ul class="dropdown-menu tasks">
+								<li class="dropdown-menu-title">
+ 									<span>You have 17 tasks in progress ToDo</span>
+									<a href="#refresh"><i class="icon-repeat"></i></a>
+								</li>
+								<li>
+                                    <a href="#">
+										<span class="header">
+											<span class="title">iOS Development</span>
+											<span class="percent"></span>
+										</span>
+                                        <div class="taskProgress progressSlim red">80</div> 
+                                    </a>
+                                </li>
+                                
+							</ul>
+						</li>
+						<!-- end: Notifications Dropdown -->
+						<li>
+							<a class="btn" href="#">
+								<i class="halflings-icon white wrench"></i>
+							</a>
+						</li>
+						<!-- start: User Dropdown -->
+						<li class="dropdown">
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="halflings-icon white user"></i> Hallo, 
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-menu-title">
+ 									<span>Account Settings</span>
+								</li>
+								<li><a href="user.html"><i class="halflings-icon user"></i> Profile</a></li>
+								<li><a href="../logout.php"><i class="halflings-icon off"></i> Abmelden</a></li>
+							</ul>
+						</li>
+						<!-- end: User Dropdown -->
+					</ul>
+				</div>
+				<!-- end: Header Menu -->
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- start: Header -->
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+				
+			<!-- start: Main Menu -->
+			<div id="sidebar-left" class="span2">
+				<div class="nav-collapse sidebar-nav">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+						<li><a href="../user/index.php"><i class="icon-home"></i><span class="hidden-tablet">User Dashboard</span></a></li>	
+
+						<li>
+							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
+							<ul>
+								<li><a class="submenu" href="ticket.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="admin_ticket_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Ticket eröffnen</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">#</span></a></li>
+							</ul>	
+						</li>
+						<li>
+							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> News</span></a>
+							<ul>
+								<li><a class="submenu" href="admin_news.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="admin_news_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> News erstellen</span></a></li>
+							
+							</ul>	
+						</li>
+                        <li>
+							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Server</span></a>
+							<ul>
+								<li><a class="submenu" href="server.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="server_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
+								
+							</ul>	
+						</li>
+						
+						<li>
+                            <a class="dropmenu" href="#"><i class="icon-user"></i><span class="hidden-tablet"> Benutzer</span></a>
+							<ul>
+								<li><a class="submenu" href="user.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Gruppen</span></a></li>
+							</ul>	
+						</li>
+                        <li>
+							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a>
+							<ul>
+								<li><a class="submenu" href="settings.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								
+							</ul>	
+						</li>						
+						
+					</ul>
+				</div>
+			</div>
+			<!-- end: Main Menu -->
+			
+			<noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">Warning!</h4>
+					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+				</div>
+			</noscript>
+			
+			<!-- start: Content -->
+			
+			<div id="content" class="span10">
+			
+			
+			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home"></i>
+					<a href="index.html">Dashboard</a> 
+					<i class="icon-angle-right"></i>
+				</li>
+				<li><a href="#">Dashboard</a></li>
+			</ul>
+
+			<div class="row-fluid">
+				
+<div class="news">
+
+<script type="text/javascript">
+function openComments(url)
+{
+comments = window.open(url, "Comment", "menubar=0,resizable=0,width=380,height=480")
+comments.focus()
+}
+</script>
+
+
+<?php
+$query = "SELECT id, title, author, post, DATE_FORMAT(date, '%M %d, %Y') as sd FROM news_posts";
+$result = @mysql_query($query);
+
+if ($result) {
+while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+$url = 'comments.php?id='.$row['id'];
+echo '<p><b>'.$row['title'].'</b><br />
+'.$row['sd'].'<br />
+Posted by : <b>'.$row['author'].'</b><br />
+'.$row['post'].'<br /></p>';
+}
+} else {
+echo 'There are no news posts to display';
+}
+?>
+
+			
+			<div class="row-fluid">	
+
+				
+				
+				<div class="clearfix"></div>
+								
+			</div><!--/row-->
+			
+       
+
+	</div><!--/.fluid-container-->
+	
+			<!-- end: Content -->
 <!-- start: CSS -->
 	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
-	
-	
+	<link href="../css/news.css" rel="stylesheet">
 	<link id="base-style" href="../css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
@@ -66,238 +274,5 @@
 
 		<script src="../js/custom.js"></script>
 	<!-- end: JavaScript-->
-	  
-	  
-	  
-	  <div class="navbar">
-		<div class="navbar-inner">
-			<div class="container-fluid">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-				<a class="brand" href="user_dashboard.php"><span>User Panel</span></a>
-								
-				<!-- start: Header Menu -->
-				<div class="nav-no-collapse header-nav">
-					<ul class="nav pull-right">
-						<li class="dropdown hidden-phone">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white warning-sign"></i>
-							</a>
-							<ul class="dropdown-menu notifications">
-								<li class="dropdown-menu-title">
- 									<span>You have 11 notifications</span>
-									<a href="#refresh"><i class="icon-repeat"></i></a>
-								</li>	
-                            	<li>
-                                    <a href="#">
-										<span class="icon blue"><i class="icon-user"></i></span>
-										<span class="message">ToDo</span>
-										<span class="time">1 min ToDo</span> 
-                                    </a>
-                                </li>
-								
-                                <li class="dropdown-menu-sub-footer">
-                            		<a>View all notifications ToDo</a>
-								</li>	
-							</ul>
-						</li>
-						<!-- start: Notifications Dropdown -->
-						<li class="dropdown hidden-phone">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white tasks"></i>
-							</a>
-							<ul class="dropdown-menu tasks">
-								<li class="dropdown-menu-title">
- 									<span>You have 17 tasks in progress ToDo</span>
-									<a href="#refresh"><i class="icon-repeat"></i></a>
-								</li>
-								<li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">iOS Development</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim red">80</div> 
-                                    </a>
-                                </li>
-                                
-							</ul>
-						</li>
-						<!-- end: Notifications Dropdown -->
-						<li>
-							<a class="btn" href="#">
-								<i class="halflings-icon white wrench"></i>
-							</a>
-						</li>
-						<!-- start: User Dropdown -->
-						<li class="dropdown">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						
-								<i class="halflings-icon white user"></i>
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown-menu-title">
- 									<span>Account Settings</span>
-								</li>
-								<li><a href="user.html"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="../logout.php"><i class="halflings-icon off"></i> Abmelden</a></li>
-							</ul>
-						</li>
-						<!-- end: User Dropdown -->
-					</ul>
-				</div>
-				<!-- end: Header Menu -->
-				
-			</div>
-		</div>
-	</div>
 
-	<!-- start: Header -->
-	
-		<div class="container-fluid-full">
-		<div class="row-fluid">
-				
-			<!-- start: Main Menu -->
-			<div id="sidebar-left" class="span2">
-				<div class="nav-collapse sidebar-nav">
-					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="user_dashboard.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-                        <li><a href="user_news.php"><i class="icon-inbox"></i><span class="hidden-tablet"> News</span></a></li>		
 
-						
-                        <li><a href="user_message.php"><i class="icon-envelope"></i><span class="hidden-tablet"> Nachrichten</span></a></li>		
-
-						<li>
-							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
-							<ul>
-								<li><a class="submenu" href="user_ticket.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
-								<li><a class="submenu" href="user_ticket_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Ticket erÃ¶ffnen</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">#</span></a></li>
-							</ul>	
-						</li>
-                        <li>
-							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Server</span></a>
-							<ul>
-								<li><a class="submenu" href="user_server.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
-								<li><a class="submenu" href="user_server_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Server Beantragen</span></a></li>
-								
-							</ul>	
-						</li>
-						
-						<li>
-                            <a class="dropmenu" href="#"><i class="icon-user"></i><span class="hidden-tablet"> Benutzer</span></a>
-							<ul>
-								<li><a class="submenu" href="user_profile.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
-								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Gruppen</span></a></li>
-							</ul>	
-						</li>
-                        <li>
-							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a>
-							<ul>
-								<li><a class="submenu" href="user_settings.php"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
-								
-							</ul>	
-						</li>						
-						
-					</ul>
-				</div>
-			</div>
-			<!-- end: Main Menu -->
-			
-			<noscript>
-				<div class="alert alert-block span10">
-					<h4 class="alert-heading">Warning!</h4>
-					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
-				</div>
-			</noscript>
-			
-			<!-- start: Content -->
-			
-			<div id="content" class="span10">
-			
-			
-			<ul class="breadcrumb">
-				<li>
-					<i class="icon-home"></i>
-					<a href="index.html">Dashboard</a> 
-					<i class="icon-angle-right"></i>
-				</li>
-				<li><a href="#">Dashboard</a></li>
-			</ul>
-
-			<div class="row-fluid">
-				
-	<div class="jumbotron">
-      <div class="container">
-        <h1>News</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>News1</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>News2</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>News3</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-    
-
-			
-			
-						
-			</div>		
-						
-			<div class="row-fluid">
-				
-				
-			
-			</div>
-			
-			<div class="row-fluid">
-				
-				
-			
-				</div><!--/span-->
-				
-				
-					
-				</div><!--/span-->
-				
-				
-					
-				</div>
-			
-			</div>
-			
-			<div class="row-fluid">	
-
-				
-				
-				<div class="clearfix"></div>
-								
-			</div><!--/row-->
-			
-       
-
-	</div><!--/.fluid-container-->
-	
-			<!-- end: Content -->

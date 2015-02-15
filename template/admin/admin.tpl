@@ -1,67 +1,4 @@
-	<!-- start: CSS -->
-	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="../css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-	<!-- end: CSS -->
-	<!-- start: JavaScript-->
-
-		<script src="js/jquery-1.9.1.min.js"></script>
-		<script src="js/jquery-migrate-1.0.0.min.js"></script>
 	
-		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
-	
-		<script src="js/jquery.ui.touch-punch.js"></script>
-	
-		<script src="js/modernizr.js"></script>
-	
-		<script src="js/bootstrap.min.js"></script>
-	
-		<script src="js/jquery.cookie.js"></script>
-	
-		<script src='js/fullcalendar.min.js'></script>
-	
-		<script src='js/jquery.dataTables.min.js'></script>
-
-		<script src="js/excanvas.js"></script>
-		<script src="js/jquery.flot.js"></script>
-		<script src="js/jquery.flot.pie.js"></script>
-		<script src="js/jquery.flot.stack.js"></script>
-		<script src="js/jquery.flot.resize.min.js"></script>
-	
-		<script src="js/jquery.chosen.min.js"></script>
-	
-		<script src="js/jquery.uniform.min.js"></script>
-		
-		<script src="js/jquery.cleditor.min.js"></script>
-	
-		<script src="js/jquery.noty.js"></script>
-	
-		<script src="js/jquery.elfinder.min.js"></script>
-	
-		<script src="js/jquery.raty.min.js"></script>
-	
-		<script src="js/jquery.iphone.toggle.js"></script>
-	
-		<script src="js/jquery.uploadify-3.1.min.js"></script>
-	
-		<script src="js/jquery.gritter.min.js"></script>
-	
-		<script src="js/jquery.imagesloaded.js"></script>
-	
-		<script src="js/jquery.masonry.min.js"></script>
-	
-		<script src="js/jquery.knob.modified.js"></script>
-	
-		<script src="js/jquery.sparkline.min.js"></script>
-	
-		<script src="js/counter.js"></script>
-	
-		<script src="js/retina.js"></script>
-
-		<script src="js/custom.js"></script>
-	<!-- end: JavaScript-->
 <div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
@@ -128,7 +65,7 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Hallo, <?php echo $_SESSION["user"]; ?>
+								<i class="halflings-icon white user"></i> Hallo, 
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -158,7 +95,7 @@
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
-						<li><a href="../user/user_dashboard.php"><i class="icon-home"></i><span class="hidden-tablet">User Dashboard</span></a></li>	
+						<li><a href="../user/index.php"><i class="icon-home"></i><span class="hidden-tablet">User Dashboard</span></a></li>	
 
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
@@ -168,11 +105,19 @@
 								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">#</span></a></li>
 							</ul>	
 						</li>
+						<li>
+							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> News</span></a>
+							<ul>
+								<li><a class="submenu" href="admin_news.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="admin_news_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> News erstellen</span></a></li>
+							
+							</ul>	
+						</li>
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Server</span></a>
 							<ul>
-								<li><a class="submenu" href="submenu.html"><i class="icon-th-list"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
 								<li><a class="submenu" href="server.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="server_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
 								
 							</ul>	
 						</li>
@@ -291,7 +236,7 @@
 						</div>
 						<div class="footer">
 							<span class="count">
-								<span class="number"><?php include("get_user.php"); ?></span>
+								<span class="number"><?php echo $benutzer; ?></span>
 								<span class="unit">Users</span>
 							</span>
 						</div>
@@ -318,20 +263,15 @@
 						</div>
                 	</div>
 				</div>
-						
-			</div>		
-						
-			<div class="row-fluid">
-				
-				<div class="widget yellow span4 noMargin" onTablet="span12" onDesktop="span4">
+									<div class="widget yellow span4 noMargin" onTablet="span12" onDesktop="span4">
 					<h2><span class="glyphicons fire"><i></i></span> Server Auslastung</h2>
 					<hr>
 					<div class="content">
-						 <div id="serverLoad2" style="height:224px;"></div>
+						 <div id="serverLoad2" style="height:105px;"></div>
 					</div>
-				</div>
-			
-			</div>
+				</div>	
+			</div>		
+						
 			
 			<div class="row-fluid">
 				
@@ -351,7 +291,7 @@
 						<ul class="dashboard-list metro">
 							<li class="green">
 								<a href="#">
-									<img class="avatar" alt="Dennis Ji" src="img/avatar.jpg">
+									<img class="avatar" alt="Dennis Ji" src="../img/avatar.jpg">
 								</a>
 								<strong>Name:</strong> Dennis Ji<br>
 								<strong>Since:</strong> Jul 25, 2012 11:09<br>
@@ -400,3 +340,71 @@
 	</div><!--/.fluid-container-->
 	
 			<!-- end: Content -->
+<!-- start: CSS -->
+	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+	<link id="base-style" href="../css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+	<!-- start: JavaScript-->
+	<!-- start: JavaScript-->
+
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script src="../js/jquery-migrate-1.0.0.min.js"></script>
+	
+		<script src="../js/jquery-ui-1.10.0.custom.min.js"></script>
+	
+		<script src="../js/jquery.ui.touch-punch.js"></script>
+	
+		<script src="../js/modernizr.js"></script>
+	
+		<script src="../js/bootstrap.min.js"></script>
+	
+		<script src="../js/jquery.cookie.js"></script>
+	
+		<script src='../js/fullcalendar.min.js'></script>
+	
+		<script src='../js/jquery.dataTables.min.js'></script>
+
+		<script src="../js/excanvas.js"></script>
+		<script src="../js/jquery.flot.js"></script>
+		<script src="../js/jquery.flot.pie.js"></script>
+		<script src="../js/jquery.flot.stack.js"></script>
+		<script src="../js/jquery.flot.resize.min.js"></script>
+	
+		<script src="../js/jquery.chosen.min.js"></script>
+	
+		<script src="../js/jquery.uniform.min.js"></script>
+		
+		<script src="../js/jquery.cleditor.min.js"></script>
+	
+		<script src="../js/jquery.noty.js"></script>
+	
+		<script src="../js/jquery.elfinder.min.js"></script>
+	
+		<script src="../js/jquery.raty.min.js"></script>
+	
+		<script src="../js/jquery.iphone.toggle.js"></script>
+	
+		<script src="../js/jquery.uploadify-3.1.min.js"></script>
+	
+		<script src="../js/jquery.gritter.min.js"></script>
+	
+		<script src="../js/jquery.imagesloaded.js"></script>
+	
+		<script src="../js/jquery.masonry.min.js"></script>
+	
+		<script src="../js/jquery.knob.modified.js"></script>
+	
+		<script src="../js/jquery.sparkline.min.js"></script>
+	
+		<script src="../js/counter.js"></script>
+	
+		<script src="../js/retina.js"></script>
+
+		<script src="../js/custom.js"></script>
+	<!-- end: JavaScript-->
+
+

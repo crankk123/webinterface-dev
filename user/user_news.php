@@ -9,9 +9,10 @@
  *
  */
   
-
+require_once('../includes/auth.php');
+include ('../includes/mysql_connect.php'); 
 require("../template/user/user_news.tpl");
-//include("../include.php");
-//require("../template/footer.tpl");
+
 
 ?>
+

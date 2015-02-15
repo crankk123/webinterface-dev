@@ -1,13 +1,6 @@
 <?php
-
-/* Database Connection */
-
-$sDbHost = 'localhost';
-$sDbName = 'webinterface';
-$sDbUser = 'root';
-$sDbPwd = 'alka';
-
-$dbConn = mysql_connect ($sDbHost, $sDbUser, $sDbPwd) or die ('MySQL connect failed. ' . mysql_error());
-mysql_select_db($sDbName,$dbConn) or die('Cannot select database. ' . mysql_error());
-
+	define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', 'alka');
+    define('DB_DATABASE', 'test_login');
 ?>

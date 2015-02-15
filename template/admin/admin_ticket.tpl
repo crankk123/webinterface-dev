@@ -1,69 +1,4 @@
-<!-- start: CSS -->
-	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
-	
-	<link id="base-style" href="../css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-	<!-- end: CSS -->
-	<!-- start: JavaScript-->
-	<!-- start: JavaScript-->
 
-		<script src="../js/jquery-1.9.1.min.js"></script>
-		<script src="../js/jquery-migrate-1.0.0.min.js"></script>
-	
-		<script src="../js/jquery-ui-1.10.0.custom.min.js"></script>
-	
-		<script src="../js/jquery.ui.touch-punch.js"></script>
-	
-		<script src="../js/modernizr.js"></script>
-	
-		<script src="../js/bootstrap.min.js"></script>
-	
-		<script src="../js/jquery.cookie.js"></script>
-	
-		<script src='../js/fullcalendar.min.js'></script>
-	
-		<script src='../js/jquery.dataTables.min.js'></script>
-
-		<script src="../js/excanvas.js"></script>
-		<script src="../js/jquery.flot.js"></script>
-		<script src="../js/jquery.flot.pie.js"></script>
-		<script src="../js/jquery.flot.stack.js"></script>
-		<script src="../js/jquery.flot.resize.min.js"></script>
-	
-		<script src="../js/jquery.chosen.min.js"></script>
-	
-		<script src="../js/jquery.uniform.min.js"></script>
-		
-		<script src="../js/jquery.cleditor.min.js"></script>
-	
-		<script src="../js/jquery.noty.js"></script>
-	
-		<script src="../js/jquery.elfinder.min.js"></script>
-	
-		<script src="../js/jquery.raty.min.js"></script>
-	
-		<script src="../js/jquery.iphone.toggle.js"></script>
-	
-		<script src="../js/jquery.uploadify-3.1.min.js"></script>
-	
-		<script src="../js/jquery.gritter.min.js"></script>
-	
-		<script src="../js/jquery.imagesloaded.js"></script>
-	
-		<script src="../js/jquery.masonry.min.js"></script>
-	
-		<script src="../js/jquery.knob.modified.js"></script>
-	
-		<script src="../js/jquery.sparkline.min.js"></script>
-	
-		<script src="../js/counter.js"></script>
-	
-		<script src="../js/retina.js"></script>
-
-		<script src="../js/custom.js"></script>
-	<!-- end: JavaScript-->
 	   <!-- start: Header -->
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -227,31 +162,33 @@
 			 <h2>Ticket Übersicht</h2>
   <p>Übersicht über Tickets</p>            
   <!-- aus DB auslesen-->
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Betreff</th>
-        <th>Benutzername</th>
-		<th>Abteilung</th>
-		<th>Priorität</th>
-		<th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>    			<!-- id-->
-        <td>Test Ticket</td>  			<!-- ip-->
-        <td>test</td>			<!-- port-->
-		<td>Server Admin</td>			<!-- status-->
-		<td>admin</td>			<!-- user-->
-		<td>Offen</td>			<!-- user-->
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a></td>
-				<td><a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-edit"></span> Löschen</a></td>
-		 </tr>
-  
-    </tbody>
-  </table>
+<script type="text/javascript">
+function openComments(url)
+{
+comments = window.open(url, "Comment", "menubar=0,resizable=0,width=380,height=480")
+comments.focus()
+}
+</script>
+
+<?php
+include ('../includes/mysql_connect.php');
+$query = "SELECT id, title, author, post, DATE_FORMAT(date, '%M %d, %Y') as sd FROM ticket";
+$result = @mysql_query($query);
+
+if ($result) {
+while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+$url = 'comments.php?id='.$row['id'];
+echo '<p><b>'.$row['title'].'</b><br />
+'.$row['sd'].'<br />
+Posted by : <b>'.$row['author'].'</b><br />
+'.$row['post'].'<br />
+<a href="javascript:openComments(\''.$url.'\')">Add new comment or view posted comments</a></p>';
+}
+} else {
+echo 'There are no news posts to display';
+}
+?>
+
 </div>
 </div>
   
@@ -270,4 +207,69 @@
 			<!-- end: Content -->
 		</div><!--/#content.span10-->
 		</div><!--/fluid-row-->
- 
+ <!-- start: CSS -->
+	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<link id="base-style" href="../css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+	<!-- start: JavaScript-->
+	<!-- start: JavaScript-->
+
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script src="../js/jquery-migrate-1.0.0.min.js"></script>
+	
+		<script src="../js/jquery-ui-1.10.0.custom.min.js"></script>
+	
+		<script src="../js/jquery.ui.touch-punch.js"></script>
+	
+		<script src="../js/modernizr.js"></script>
+	
+		<script src="../js/bootstrap.min.js"></script>
+	
+		<script src="../js/jquery.cookie.js"></script>
+	
+		<script src='../js/fullcalendar.min.js'></script>
+	
+		<script src='../js/jquery.dataTables.min.js'></script>
+
+		<script src="../js/excanvas.js"></script>
+		<script src="../js/jquery.flot.js"></script>
+		<script src="../js/jquery.flot.pie.js"></script>
+		<script src="../js/jquery.flot.stack.js"></script>
+		<script src="../js/jquery.flot.resize.min.js"></script>
+	
+		<script src="../js/jquery.chosen.min.js"></script>
+	
+		<script src="../js/jquery.uniform.min.js"></script>
+		
+		<script src="../js/jquery.cleditor.min.js"></script>
+	
+		<script src="../js/jquery.noty.js"></script>
+	
+		<script src="../js/jquery.elfinder.min.js"></script>
+	
+		<script src="../js/jquery.raty.min.js"></script>
+	
+		<script src="../js/jquery.iphone.toggle.js"></script>
+	
+		<script src="../js/jquery.uploadify-3.1.min.js"></script>
+	
+		<script src="../js/jquery.gritter.min.js"></script>
+	
+		<script src="../js/jquery.imagesloaded.js"></script>
+	
+		<script src="../js/jquery.masonry.min.js"></script>
+	
+		<script src="../js/jquery.knob.modified.js"></script>
+	
+		<script src="../js/jquery.sparkline.min.js"></script>
+	
+		<script src="../js/counter.js"></script>
+	
+		<script src="../js/retina.js"></script>
+
+		<script src="../js/custom.js"></script>
+	<!-- end: JavaScript-->

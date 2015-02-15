@@ -6,8 +6,6 @@
  *	The " is not allowed but you can create chains.	
  *
  */
-  
-$content="<h1>Hello World</h1>";
-
+require_once('../includes/auth.php');
 require("../template/admin/admin_ticket.tpl");
 ?>

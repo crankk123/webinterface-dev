@@ -241,7 +241,6 @@ body {
 	border: none;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	 padding-top: 50px;
 }
 
 a {
@@ -2005,8 +2004,6 @@ fieldset[disabled] .btn-link:focus {
 /* Login Box
 =================================================================== */
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
   background-color: #eee;
 }
 

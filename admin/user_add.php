@@ -1,27 +1,6 @@
-<!--<!DOCTYPE html>
-<html>
-    <head>
-        <title>Register</title>
-        <link href="../css/admin/register.css" rel="stylesheet" media="screen">
-    </head>
-    <body>
-        <div id="register">
-            <form action='register.php' method='post'>
-                <p>Benutzername: <input type="text" name="user"></p>
-                <p>Passwort: <input type="text" name="pass"></p>
-                <p>Passwort wiederholen: <input type="text" name="pass_w"></p>
-                <p>E-Mail: <input type="text" name="email"></p>
-                <input type="submit" value='Register' name="register"> <input type="reset" value="Reset" name="reset">
-                <a href="login.php">Einloggen</a>
-            </form>
-        </div>
-    </body>
-</html>-->
-<!--<link href="../css/register.css" rel="stylesheet" media="screen"> -->
 
 <?php
-//require("../template/admin/admin_user_add.tpl");
-//require("../include.php");
+require_once('../includes/auth.php');
 function valid($benutzer, $passwort,$email, $error)
 {
 ?>

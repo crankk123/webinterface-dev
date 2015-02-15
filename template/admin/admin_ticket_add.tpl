@@ -1,6 +1,5 @@
-		
-				<!-- start: Header -->
-	<div class="navbar">
+	
+<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
@@ -65,16 +64,16 @@
 						</li>
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Dennis Ji
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="halflings-icon white user"></i> Hallo, 
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-menu-title">
  									<span>Account Settings</span>
 								</li>
-								<li><a href="profile.php"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="../index.php"><i class="halflings-icon off"></i> Logout</a></li>
+								<li><a href="user.html"><i class="halflings-icon user"></i> Profile</a></li>
+								<li><a href="../logout.php"><i class="halflings-icon off"></i> Abmelden</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -85,6 +84,7 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- start: Header -->
 	
 		<div class="container-fluid-full">
@@ -95,32 +95,46 @@
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+						<li><a href="../user/index.php"><i class="icon-home"></i><span class="hidden-tablet">User Dashboard</span></a></li>	
 
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
 							<ul>
-								<li><a class="submenu" href="newticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neues Ticket</span></a></li>
-								<li><a class="submenu" href="ticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> ‹bersicht</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet">#</span></a></li>
+								<li><a class="submenu" href="ticket.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="admin_ticket_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Ticket er√∂ffnen</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">#</span></a></li>
+							</ul>	
+						</li>
+						<li>
+							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> News</span></a>
+							<ul>
+								<li><a class="submenu" href="admin_news.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="admin_news_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> News erstellen</span></a></li>
+							
 							</ul>	
 						</li>
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Server</span></a>
 							<ul>
-								<li><a class="submenu" href="submenu.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
-								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> ‹bersicht</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
+								<li><a class="submenu" href="server.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="server_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
+								
 							</ul>	
 						</li>
 						
-						<li><a href="user.php"><i class="icon-user"></i><span class="hidden-tablet"> User</span></a></li>
-							
-							<li>
+						<li>
+                            <a class="dropmenu" href="#"><i class="icon-user"></i><span class="hidden-tablet"> Benutzer</span></a>
+							<ul>
+								<li><a class="submenu" href="user.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Gruppen</span></a></li>
+							</ul>	
+						</li>
+                        <li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a>
 							<ul>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> ‹bersicht</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
+								<li><a class="submenu" href="settings.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								
 							</ul>	
 						</li>						
 						
@@ -135,119 +149,95 @@
 					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
 				</div>
 			</noscript>
+			
 			<!-- start: Content -->
+			
 			<div id="content" class="span10">
+			
+			
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
-					<a href="index.php">Dashboard</a> 
+					<a href="index.html">Dashboard</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Seiten Einstellungen</a></li>
+				<li><a href="#">Dashboard</a></li>
 			</ul>
 
-			<h1>Seiten Einstellungen</h1>
-			<!--
-<div class='row'>
-<div id='regbox' class='col-lg-6'>
-    <div class='panel panel-primary'>
-        <div class='panel-heading'>
-            <h3 class='panel-title'>Configuration</h3>
-        </div>
-        <div class='panel-body'>
-            <form class='form-horizontal' role='form' name='adminConfiguration' action='../api/update_site_settings.php' method='post'>
-                <div class="form-group">
-                    <label for="inputWebsiteName" class="col-sm-4 control-label">Site Name</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputWebsiteName" class="form-control" name='website_name'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputWebsiteURL" class="col-sm-4 control-label">Admin Root URL</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputWebsiteURL" class="form-control" name='website_url'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail" class="col-sm-4 control-label">Account Management Email</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputEmail" class="form-control" name='email'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="userRegistration" class="col-sm-4 control-label">User Registration</label>
-                    <div class="col-sm-8">
-                        <input type="checkbox" id ="userRegistration" name='can_register' value='1'/>
-                        <br><small>Specify whether users can create new accounts by themselves.</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="emailLogin" class="col-sm-4 control-label">Email Login</label>
-                    <div class="col-sm-8">
-                        <input type="checkbox" id ="checkEmailLogin" name='email_login' value='1'/>
-                        <br><small>Specify whether users can login via email address or username instead of just username.</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="newUserTitle" class="col-sm-4 control-label">Default New User Title</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="newUserTitle" class="form-control" name='new_user_title'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="checkEmailActivation" class="col-sm-4 control-label">Email Activation</label>
-                    <div class="col-sm-8">
-                        <input type="checkbox" id ="checkEmailActivation" name='activation' value='1'/>
-                        <br><small>Specify whether email activation is required for newly registered accounts.</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputThreshold" class="col-sm-4 control-label">Account Activation Threshold</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputThreshold" class="form-control" name='resend_activation_threshold'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputTimeoutToken" class="col-sm-4 control-label">Password Reset Token Timeout value (in hours Max: 27 Hours)</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputTimeoutToken" class="form-control" name='token_timeout'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="selectLanguage" class="col-sm-4 control-label">Site Language</label>
-                    <div class="col-sm-8">
-                        <select id="selectLanguage" name='language'></select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-4 col-sm-8">
-                        <button type="submit" class="btn btn-success submit" value='Update'>Update</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-	-->		
-			<div class="row-fluid">	
+			<div class="row-fluid">
+				
+	<?php
+if (isset($_POST['submitted'])) {
+include ('mysql_connect.php');
+if (empty($_POST['title'])) {
+echo '<p><font color="red">You need to enter a title.</font></p>';
+} else {
+$title = $_POST['title'];
+}
 
+if (empty($_POST['name'])) {
+echo '<p><font color="red">You need to enter a name.</font></p>';
+} else {
+$name = $_POST['name'];
+}
+
+if (empty($_POST['message'])) {
+echo '<p><font color="red">You need to enter a message.</font></p>';
+} else {
+$message = $_POST['message'];
+}
+
+if ($title && $name && $message) {
+$query = "INSERT INTO ticket (title, author, post, date) VALUES ('$title', '$name', '$message', NOW())";
+$result = @mysql_query($query);
+
+if ($result) {
+echo '<p><font color="red">Ticket er√∂ffnet!</font></p>';
+} else {
+echo '<font color="red"><p>News could not be added! Please try again.</p></font>';
+}
+} else {
+echo '<p><font color="red">Please fill in the appropriate information</font></p>';
+}
+}
+?>
+
+<!-- Start Formoid form-->
+<link rel="stylesheet" href="ticket_files/formoid1/formoid-solid-blue.css" type="text/css" />
+<script type="text/javascript" src="ticket_files/formoid1/jquery.min.js"></script>
+<form action="<?php $_SERVER['PHP_SELF']; ?>" class="formoid-solid-blue" style="background-color:#FFFFFF;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:480px;min-width:150px" method="post"><div class="title"><h2>Ticket er√∂ffnen</h2></div>
+	<div class="element-input"><label class="title"></label><div class="item-cont"><input class="large" type="text" value="<?php if(isset($_POST['title'])) echo $_POST['title']; ?>" name="title" placeholder="Title"/><span class=""></span></div></div>
+	<div class="element-input"><label class="title"></label><div class="item-cont"><input class="large" type="text" value="<?php if(isset($_POST['name'])) echo $_POST['name']; ?>" name="name" placeholder="Kategorie"/><span class=""></span></div></div>
+	<div class="element-textarea"><label class="title"></label><div class="item-cont"><textarea class="medium" name="message"  cols="20" rows="5" placeholder="Nachricht"><?php if(isset($_POST['message'])) echo $_POST['message']; ?></textarea><span class=""></span></div></div>
+	<div class="submit"><input type="submit" value="Ticket er√∂ffnen"/></div>
+</form>
+<script type="text/javascript" src="ticket_files/formoid1/formoid-solid-blue.js"></script>
+<!-- Stop Formoid form-->
+
+			
+					
+						
+			
+				
+				
+			
+			
 				
 				
 				<div class="clearfix"></div>
 								
-			</div><!--/row-->
+			
 			
        
 
 	</div><!--/.fluid-container-->
 	
 			<!-- end: Content -->
-		</div><!--/#content.span10-->
-		</div><!--/fluid-row-->
-		<!-- start: CSS -->
+<!-- start: CSS -->
 	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+	<link href="../css/news.css" rel="stylesheet">
 	<link id="base-style" href="../css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
@@ -310,3 +300,5 @@
 
 		<script src="../js/custom.js"></script>
 	<!-- end: JavaScript-->
+
+

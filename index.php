@@ -1,66 +1,65 @@
-<?php
-/*	
- *	Content File
- *	
- *	Every HTML Content should stored in $content var. 
- *	The " is not allowed but you can create chains.	
- *
- */
- require("template/index.tpl");
 
-?>
-<?php
-session_start();
-if (isset($_POST['user']) AND isset($_POST['pass'])){ 
-	$benutzer = $_POST['user'];
-	$passwort = $_POST['pass'];
-	$_SESSION["user"] = $benutzer;
-	
-	if($benutzer AND $passwort)
-	{
-	  //connect to db
-		$connect = mysql_connect("localhost","root","alka");
-		mysql_select_db("webinterface");
 
-		$query = mysql_query("SELECT * FROM userdaten WHERE benutzer='$benutzer'");
-		$num = mysql_num_rows($query);
-
-		if($num>0)
-		{
-			WHILE ($row = mysql_fetch_assoc($query))
-			{
-				$dbbenutzer = $row['benutzer'];
-				$dbpasswort = $row['passwort'];		  
-			}
-			if ($dbbenutzer==$benutzer AND $dbpasswort==$passwort)
-			{
-				$_SESSION['loggedin'] = true; 
-				header("Location:admin/index.php"); 
-
-			}
-			else
-				echo "<script language='javascript'>alert('Ihre Daten wurden nicht gefunden');</script>";
-		}		
-		else
-			echo "<script language='javascript'>alert('Der angegeben Benutzer existiert nicht');</script>"; 
-	}
-
-	else
-		echo "<script language='javascript'>alert('Bitte füllen Sie alle Felder aus!');</script>";	
-}
-?>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Webinterface</title>
-	<!-- Bootstrap core CSS -->
-
-	<!-- Custom styles for this template -->
+<link id="bootstrap-style" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/login.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js</script>
+	<link id="base-style" href="css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 
 
+<div class="container" style="margin-top:40px">
+		<div class="row">
+			<div class="col-sm-6 col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong> Sign in to continue</strong>
+					</div>
+					<div class="panel-body">
+						<form role="form" action="login-exec.php" method="POST">
+							<fieldset>
+								<div class="row">
+									<div class="center-block">
+										<img class="profile-img"
+											src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-10  col-md-offset-1 ">
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-user"></i>
+												</span> 
+												<input class="form-control" placeholder="Username" name="login" type="text" autofocus>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-lock"></i>
+												</span>
+												<input class="form-control" placeholder="Password" name="password" type="password" value="">
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-lg btn-primary btn-block" value="Login">
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="panel-footer ">
+						Don't have an account! <a href="register.php" onClick=""> Sign Up Here </a>
+					</div>
+                </div>
+			</div>
+		</div>
+		<div id="footer">&raquo; <a href="#">Homepage</a> | Admin Panel 
+		
+	</div>
+  <video autoplay loop poster="polina.jpg" id="bgvid">
+
+<source src="final.mp4" type="video/mp4">
+</video>

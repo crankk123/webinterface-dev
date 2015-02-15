@@ -1,4 +1,5 @@
 <?php
+require_once('../includes/auth.php');
 function valid($id, $benutzer, $passwort,$email, $error)
 {
 ?>
@@ -61,27 +62,27 @@ include('config.php');
 if (isset($_POST['submit']))
 {
 
-if (is_numeric($_POST['id']))
+if (is_numeric($_POST['member_id']))
 {
 
-$id = $_POST['id'];
-$benutzer = mysql_real_escape_string(htmlspecialchars($_POST['benutzer']));
+$member_id = $_POST['member_id'];
+$login = mysql_real_escape_string(htmlspecialchars($_POST['login']));
 $passwort = mysql_real_escape_string(htmlspecialchars($_POST['passwort']));
 $email = mysql_real_escape_string(htmlspecialchars($_POST['email']));
 
 
-if ($benutzer == '' || $passwort == '' || $email == '')
+if ($login == '' || $passwort == '' || $email == '')
 {
 
 $error = 'ERROR: Please fill in all required fields!';
 
 
-valid($id, $benutzer, $passwort,$email, $error);
+valid($member_id, $login, $passwort,$email, $error);
 }
 else
 {
 
-mysql_query("UPDATE userdaten SET benutzer='$benutzer', passwort='$passwort' ,email='$email' WHERE id='$id'")
+mysql_query("UPDATE members SET login='$login', passwort='$passwort' ,email='$email' WHERE member_id='$member_id'")
 or die(mysql_error());
 
 header("Location: user.php");
@@ -97,22 +98,22 @@ else
 
 {
 
-if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0)
+if (isset($_GET['member_id']) && is_numeric($_GET['member_id']) && $_GET['member_id'] > 0)
 {
 
-$id = $_GET['id'];
-$result = mysql_query("SELECT * FROM userdaten WHERE id=$id")
+$member_id = $_GET['member_id'];
+$result = mysql_query("SELECT * FROM members WHERE member_id=$member_id")
 or die(mysql_error());
 $row = mysql_fetch_array($result);
 
 if($row)
 {
 
-$benutzer = $row['benutzer'];
+$login = $row['login'];
 $passwort = $row['passwort'];
 $email = $row['email'];
 
-valid($id, $benutzer, $passwort,$email,'');
+valid($member_id, $login, $passwort,$email,'');
 }
 else
 {

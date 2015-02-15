@@ -1,6 +1,11 @@
-		
-				<!-- start: Header -->
-	<div class="navbar">
+<!-- start: CSS -->
+	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	
+	<link id="base-style" href="../css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
+<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
@@ -8,7 +13,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.php"><span>Admin Panel</span></a>
+				<a class="brand" href="index.php"><span>User Panel</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -66,15 +71,16 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Dennis Ji
+						
+								<i class="halflings-icon white user"></i>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-menu-title">
- 									<span>Account Settings</span>
+ 									<span>Account Settings </span>
 								</li>
-								<li><a href="profile.php"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="../index.php"><i class="halflings-icon off"></i> Logout</a></li>
+								<li><a href="../user/user_profile.php"><i class="halflings-icon user"></i> Profile</a></li>
+								<li><a href="../logout.php"><i class="halflings-icon off"></i> Abmelden</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -85,6 +91,7 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- start: Header -->
 	
 		<div class="container-fluid-full">
@@ -94,33 +101,40 @@
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+						<li><a href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+                        <li><a href="user_news.php"><i class="icon-inbox"></i><span class="hidden-tablet"> News</span></a></li>	
+                        <li><a href="user_message.php"><i class="icon-envelope"></i><span class="hidden-tablet"> Nachrichten</span></a></li>	
 
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Support</span></a>
 							<ul>
-								<li><a class="submenu" href="newticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neues Ticket</span></a></li>
-								<li><a class="submenu" href="ticket.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet">#</span></a></li>
+								<li><a class="submenu" href="user_ticket.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="user_ticket_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Ticket eröffnen</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">#</span></a></li>
 							</ul>	
 						</li>
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> Server</span></a>
 							<ul>
-								<li><a class="submenu" href="submenu.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Neuen Server</span></a></li>
-								<li><a class="submenu" href="server.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
+								<li><a class="submenu" href="user_server.php"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								<li><a class="submenu" href="user_server_add.php"><i class="icon-th-list"></i><span class="hidden-tablet"> Server Beantragen</span></a></li>
+								
 							</ul>	
 						</li>
 						
-						<li><a href="user.php"><i class="icon-user"></i><span class="hidden-tablet"> User</span></a></li>
-							
-							<li>
+						<li>
+                            <a class="dropmenu" href="#"><i class="icon-user"></i><span class="hidden-tablet"> Benutzer</span></a>
+							<ul>
+								<li><a class="submenu" href="user_profile.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								
+							</ul>	
+						</li>
+                        <li>
 							<a class="dropmenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a>
 							<ul>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Seiten Einstellungen</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Übersicht</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> #</span></a></li>
+								<li><a class="submenu" href="user_settings.php"><i class="icon-th-list"></i><span class="hidden-tablet">Einstellungen</span></a></li>
+								<li><a class="submenu" href="#"><i class="icon-th-list"></i><span class="hidden-tablet"> &Uuml;bersicht</span></a></li>
+								
 							</ul>	
 						</li>						
 						
@@ -135,101 +149,84 @@
 					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
 				</div>
 			</noscript>
+			
 			<!-- start: Content -->
+			
 			<div id="content" class="span10">
+			
+			
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
 					<a href="index.php">Dashboard</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Seiten Einstellungen</a></li>
+				<li><a href="#">Profile</a></li>
 			</ul>
 
-			<h1>Seiten Einstellungen</h1>
-			<!--
-<div class='row'>
-<div id='regbox' class='col-lg-6'>
-    <div class='panel panel-primary'>
-        <div class='panel-heading'>
-            <h3 class='panel-title'>Configuration</h3>
-        </div>
-        <div class='panel-body'>
-            <form class='form-horizontal' role='form' name='adminConfiguration' action='../api/update_site_settings.php' method='post'>
-                <div class="form-group">
-                    <label for="inputWebsiteName" class="col-sm-4 control-label">Site Name</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputWebsiteName" class="form-control" name='website_name'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputWebsiteURL" class="col-sm-4 control-label">Admin Root URL</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputWebsiteURL" class="form-control" name='website_url'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail" class="col-sm-4 control-label">Account Management Email</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputEmail" class="form-control" name='email'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="userRegistration" class="col-sm-4 control-label">User Registration</label>
-                    <div class="col-sm-8">
-                        <input type="checkbox" id ="userRegistration" name='can_register' value='1'/>
-                        <br><small>Specify whether users can create new accounts by themselves.</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="emailLogin" class="col-sm-4 control-label">Email Login</label>
-                    <div class="col-sm-8">
-                        <input type="checkbox" id ="checkEmailLogin" name='email_login' value='1'/>
-                        <br><small>Specify whether users can login via email address or username instead of just username.</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="newUserTitle" class="col-sm-4 control-label">Default New User Title</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="newUserTitle" class="form-control" name='new_user_title'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="checkEmailActivation" class="col-sm-4 control-label">Email Activation</label>
-                    <div class="col-sm-8">
-                        <input type="checkbox" id ="checkEmailActivation" name='activation' value='1'/>
-                        <br><small>Specify whether email activation is required for newly registered accounts.</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputThreshold" class="col-sm-4 control-label">Account Activation Threshold</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputThreshold" class="form-control" name='resend_activation_threshold'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputTimeoutToken" class="col-sm-4 control-label">Password Reset Token Timeout value (in hours Max: 27 Hours)</label>
-                    <div class="col-sm-8">
-                        <input type='text' id="inputTimeoutToken" class="form-control" name='token_timeout'/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="selectLanguage" class="col-sm-4 control-label">Site Language</label>
-                    <div class="col-sm-8">
-                        <select id="selectLanguage" name='language'></select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-4 col-sm-8">
-                        <button type="submit" class="btn btn-success submit" value='Update'>Update</button>
-						</div>
-					</div>
-				</form>
+			<div class="row-fluid">
+				
+	<div class="well">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#home" data-toggle="tab">Profile</a></li>
+      <li><a href="#profile" data-toggle="tab">Password</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home">
+        <form id="tab">
+            <label>Username</label>
+            <input type="text" value="jsmith" class="input-xlarge">
+            <label>First Name</label>
+            <input type="text" value="John" class="input-xlarge">
+            <label>Last Name</label>
+            <input type="text" value="Smith" class="input-xlarge">
+            <label>Email</label>
+            <input type="text" value="jsmith@yourcompany.com" class="input-xlarge">
+            
+          	<div>
+        	    <button class="btn btn-primary">Update</button>
+        	</div>
+        </form>
+      </div>
+      <div class="tab-pane fade" id="profile">
+    	<form id="tab2">
+        	<label>New Password</label>
+        	<input type="password" class="input-xlarge">
+        	<div>
+        	    <button class="btn btn-primary">Update</button>
+        	</div>
+    	</form>
+      </div>
+  </div>
+    
+
+			
+			
+						
+			</div>		
+						
+			<div class="row-fluid">
+				
+				
+			
 			</div>
-		</div>
-	</div>
-</div>
-	-->		
+			
+			<div class="row-fluid">
+				
+				
+			
+				</div><!--/span-->
+				
+				
+					
+				</div><!--/span-->
+				
+				
+					
+				</div>
+			
+			</div>
+			
 			<div class="row-fluid">	
 
 				
@@ -243,11 +240,11 @@
 	</div><!--/.fluid-container-->
 	
 			<!-- end: Content -->
-		</div><!--/#content.span10-->
-		</div><!--/fluid-row-->
-		<!-- start: CSS -->
+			<!-- start: CSS -->
 	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	
 	<link id="base-style" href="../css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>

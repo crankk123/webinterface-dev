@@ -1,4 +1,6 @@
-<?php
+<?php	
+
+
 /*	
  *	Content File
  *	
@@ -6,7 +8,10 @@
  *	The " is not allowed but you can create chains.	
  *
  */
-require_once('../includes/auth.php');
 include ('../includes/mysql_connect.php'); 
-require("../template/admin/admin_server.tpl");
+require_once('../includes/auth.php');
+require("../template/admin/admin_news_add.tpl");
+
+
 ?>
+

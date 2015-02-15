@@ -1,68 +1,4 @@
-<!-- start: CSS -->
-	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="../css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-	<!-- end: CSS -->
-	<!-- start: JavaScript-->
-	<!-- start: JavaScript-->
 
-		<script src="../js/jquery-1.9.1.min.js"></script>
-		<script src="../js/jquery-migrate-1.0.0.min.js"></script>
-	
-		<script src="../js/jquery-ui-1.10.0.custom.min.js"></script>
-	
-		<script src="../js/jquery.ui.touch-punch.js"></script>
-	
-		<script src="../js/modernizr.js"></script>
-	
-		<script src="../js/bootstrap.min.js"></script>
-	
-		<script src="../js/jquery.cookie.js"></script>
-	
-		<script src='../js/fullcalendar.min.js'></script>
-	
-		<script src='../js/jquery.dataTables.min.js'></script>
-
-		<script src="../js/excanvas.js"></script>
-		<script src="../js/jquery.flot.js"></script>
-		<script src="../js/jquery.flot.pie.js"></script>
-		<script src="../js/jquery.flot.stack.js"></script>
-		<script src="../js/jquery.flot.resize.min.js"></script>
-	
-		<script src="../js/jquery.chosen.min.js"></script>
-	
-		<script src="../js/jquery.uniform.min.js"></script>
-		
-		<script src="../js/jquery.cleditor.min.js"></script>
-	
-		<script src="../js/jquery.noty.js"></script>
-	
-		<script src="../js/jquery.elfinder.min.js"></script>
-	
-		<script src="../js/jquery.raty.min.js"></script>
-	
-		<script src="../js/jquery.iphone.toggle.js"></script>
-	
-		<script src="../js/jquery.uploadify-3.1.min.js"></script>
-	
-		<script src="../js/jquery.gritter.min.js"></script>
-	
-		<script src="../js/jquery.imagesloaded.js"></script>
-	
-		<script src="../js/jquery.masonry.min.js"></script>
-	
-		<script src="../js/jquery.knob.modified.js"></script>
-	
-		<script src="../js/jquery.sparkline.min.js"></script>
-	
-		<script src="../js/counter.js"></script>
-	
-		<script src="../js/retina.js"></script>
-
-		<script src="../js/custom.js"></script>
-	<!-- end: JavaScript-->
 <!-- start: Header -->
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -212,33 +148,12 @@
 			</ul>
 
 			<h1>Seiten Einstellungen</h1>
-			<div class="control-group">
-  <label class="control-label" for="selectbasic">Sprache Wählen</label>
-  <div class="controls">
-    <select id="selectbasic" name="selectbasic" class="input-xlarge">
-      <option>Deutsch</option>
-      <option>English</option>
-    </select>
-  </div>
-</div>
-<div class="control-group">
-  <label class="control-label" for="selectbasic">Design Wählen</label>
-  <div class="controls">
-    <select id="selectbasic" name="selectbasic" class="input-xlarge">
-      <option>Default</option>
-      <option>Hardline</option>
-    </select>
-  </div>
-</div>
-
-<!-- Button -->
-<div class="control-group">
-  <label class="control-label" for="singlebutton"></label>
-  <div class="controls">
-    <button id="singlebutton" name="singlebutton" class="btn btn-success">Update</button>
-  </div>
-</div>
-
+			<div class="form-group">
+                    <label for="selectLanguage" class="col-sm-4 control-label">Site Language</label>
+                    <div class="col-sm-8">
+                        <select id="selectLanguage" name='language'></select>
+                    </div>
+                </div>
 			<!--
 <div class='row'>
 <div id='regbox' class='col-lg-6'>
@@ -351,3 +266,68 @@
 			<a href="#" class="btn btn-primary">Save changes</a>
 		</div>
 	</div>
+	<!-- start: CSS -->
+	<link id="bootstrap-style" href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="../css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="../css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+	<!-- start: JavaScript-->
+	<!-- start: JavaScript-->
+
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script src="../js/jquery-migrate-1.0.0.min.js"></script>
+	
+		<script src="../js/jquery-ui-1.10.0.custom.min.js"></script>
+	
+		<script src="../js/jquery.ui.touch-punch.js"></script>
+	
+		<script src="../js/modernizr.js"></script>
+	
+		<script src="../js/bootstrap.min.js"></script>
+	
+		<script src="../js/jquery.cookie.js"></script>
+	
+		<script src='../js/fullcalendar.min.js'></script>
+	
+		<script src='../js/jquery.dataTables.min.js'></script>
+
+		<script src="../js/excanvas.js"></script>
+		<script src="../js/jquery.flot.js"></script>
+		<script src="../js/jquery.flot.pie.js"></script>
+		<script src="../js/jquery.flot.stack.js"></script>
+		<script src="../js/jquery.flot.resize.min.js"></script>
+	
+		<script src="../js/jquery.chosen.min.js"></script>
+	
+		<script src="../js/jquery.uniform.min.js"></script>
+		
+		<script src="../js/jquery.cleditor.min.js"></script>
+	
+		<script src="../js/jquery.noty.js"></script>
+	
+		<script src="../js/jquery.elfinder.min.js"></script>
+	
+		<script src="../js/jquery.raty.min.js"></script>
+	
+		<script src="../js/jquery.iphone.toggle.js"></script>
+	
+		<script src="../js/jquery.uploadify-3.1.min.js"></script>
+	
+		<script src="../js/jquery.gritter.min.js"></script>
+	
+		<script src="../js/jquery.imagesloaded.js"></script>
+	
+		<script src="../js/jquery.masonry.min.js"></script>
+	
+		<script src="../js/jquery.knob.modified.js"></script>
+	
+		<script src="../js/jquery.sparkline.min.js"></script>
+	
+		<script src="../js/counter.js"></script>
+	
+		<script src="../js/retina.js"></script>
+
+		<script src="../js/custom.js"></script>
+	<!-- end: JavaScript-->

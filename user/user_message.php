@@ -9,9 +9,8 @@
  *
  */
   
-
+require_once('../includes/auth.php');
 require("../template/user/user_message.tpl");
-//include("../include.php");
-//require("../template/footer.tpl");
+
 
 ?>
