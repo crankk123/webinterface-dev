@@ -1,14 +1,17 @@
 
 
-<link id="bootstrap-style" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	
+
+<html>
+<head>
+    <link id="bootstrap-style" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/login.css" rel="stylesheet">
 	<link id="base-style" href="css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-
-
-<div class="container" style="margin-top:40px">
+	
+	<div class="container" style="margin-top:40px">
 		<div class="row">
 			<div class="col-sm-6 col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
@@ -63,3 +66,14 @@
 
 <source src="includes/final.mp4" type="video/mp4">
 </video>
+	
+	
+</head>
+<body>
+
+</body>
+</html>
+
+	
+	
+
